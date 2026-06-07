@@ -1,7 +1,9 @@
 version: "3"
 services:
   httptunnel:
-    build: ./
+    build:
+      context: ./
+      network: host
     network_mode: host
     restart: unless-stopped
       
