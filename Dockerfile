@@ -1,7 +1,7 @@
 FROM rust:bullseye AS builder
 WORKDIR /usr/src
 
-RUN cargo install --git "https://github.com/tpmanley/mdns-responder.git" --force
+RUN cargo install --git "https://github.com/tpmanley/mdns-responder.git" --package mdns-responder --force
 RUN cargo install http-tunnel
 
 # Copy the statically-linked binary into a scratch container.
